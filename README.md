@@ -1,2 +1,0 @@
-# rodabt.github.io
-My personal blog
