@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RippleTasks - Mindful Waves of Progress</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link href='https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --deep-teal: #20649d;
+            --ocean-blue: #83C5BE;
+            --soft-white: #EDF6F9;
+            --coral: #E29578;
+            --sand: #FFDDD2;
+            --night-blue: rgb(32, 100, 157);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: 'Albert Sans', sans-serif; */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            /* cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 32 32'%3E%3Cg fill='none'%3E%3Cpath fill='%23f4f4f4' d='M14 28.292c5.684 0 10.292-4.608 10.292-10.292S19.684 7.708 14 7.708S3.708 12.316 3.708 18S8.316 28.292 14 28.292'/%3E%3Cpath fill='%2320649d' d='M26 18c0-6.627-5.373-12-12-12S2 11.373 2 18s5.373 12 12 12s12-5.373 12-12m-3 0a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9 6a6 6 0 1 1 0-12a6 6 0 0 1 0 12m3-6a3 3 0 1 0-6 0a3 3 0 0 0 6 0'/%3E%3Cpath fill='%239b9b9b' d='M14.25 17.742a.864.864 0 0 0 1.232 0l4.26-4.254a.86.86 0 0 0 0-1.23a.864.864 0 0 0-1.232 0l-4.26 4.254a.88.88 0 0 0 0 1.23'/%3E%3Cpath fill='%23da6262' d='m19.658 10.093l-.45-1.59c-.54-1.9-.01-3.95 1.39-5.34l.89-.89a.906.906 0 0 1 1.52.39L24 6zM22 12.33l1.572.458c1.878.55 3.904.01 5.278-1.416l.88-.906c.494-.5.277-1.356-.385-1.55L26 8z'/%3E%3Cpath fill='%23383c3d' d='M15.85 16.152a2.892 2.892 0 0 0 4.307-.24l5.424-6.798a1.92 1.92 0 0 0-2.698-2.696l-6.802 5.42a2.904 2.904 0 0 0-.231 4.314'/%3E%3Cpath fill='%23da6262' d='M21.258 10.742a.86.86 0 0 0 1.23 0l4.254-4.254a.86.86 0 0 0 0-1.23a.86.86 0 0 0-1.23 0l-4.254 4.254a.86.86 0 0 0 0 1.23'/%3E%3C/g%3E%3C/svg%3E") 4 5,auto; */
+        }
+
+        body {
+            background-color: var(--soft-white);
+            color: var(--night-blue);
+            line-height: 1.6;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(237, 246, 249, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 90vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--deep-teal);
+        }
+
+        .nav-links a {
+            font-size: 1.25rem;
+            color: var(--deep-teal);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--coral);
+            cursor: pointer;
+        }
+
+        .hero {
+/*          padding: 16rem 2rem 6rem;
+            text-align: center;
+            background: linear-gradient(45deg, var(--ocean-blue), var(--deep-teal));
+            color: white;
+            position: relative;
+            overflow: hidden; */
+            padding: 16rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            background-image: url('/images/bg5.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 80% 35%;
+            color: var(--soft-white);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .hero-content {
+            max-width: 30rem;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: bold;
+            color: var(--soft-white);
+        }
+
+        .ripple-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background: 
+                radial-gradient(circle at 20% 30%, white 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, white 0%, transparent 50%);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--coral);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .features {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 12px;
+            background: var(--soft-white);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.5rem;
+            background: var(--sand);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonials {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--soft-white), white);
+        }
+
+        .testimonial-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--deep-teal);
+        }
+
+        .footer {
+            background: var(--deep-teal);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="/images/logo2.svg" alt="" height="80">
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#aboutus">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="ripple-bg"></div>
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeIn">Small Actions, Profound Impact</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">
+                Take your goals and tasks into ripples of achievement with our mindful productivity app
+            </p>
+            <a href="#signup" class="cta-button animate__animated animate__fadeIn animate__delay-2s">
+                Start Your Journey
+            </a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-title">How RippleTasks Flows</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="/images/atoms1.svg" alt="Atomic icon" height="80" />
+                </div>
+                <h3>Atomic Breakdown</h3>
+                <p>Transform big tasks into achievable steps</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="/images/mindfullness.svg" alt="Mindful icon" height="80" />
+                </div>
+                <h3>Mindful Moments</h3>
+                <p>Start each task with intention and purpose</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="/images/energy2.svg" alt="Energy icon" height="80" />
+                </div>
+                <h3>Energy Alignment</h3>
+                <p>Work with your natural rhythms</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"Finally, a productivity app that doesn't make me feel guilty about taking breaks"</p>
+                <strong>- Sarah K., Designer</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"The atomic breakdown feature changed how I approach big projects"</p>
+                <strong>- James M., Project Manager</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"It's like having a mindfulness coach and productivity tool in one"</p>
+                <strong>- Dr. Lisa P., Researcher</strong>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <h3>Ready to create your first ripple?</h3>
+            <p>Start your 14-day free trial today</p>
+            <a href="#signup" class="cta-button">Get Started</a>
+        </div>
+    </footer>
+</body>
+</html>
