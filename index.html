@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RippleTasks - Mindful Waves of Progress</title>
     <link rel='preconnect' href='https://fonts.googleapis.com'>
-    <link href='https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap' rel='stylesheet'
+        type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root {
@@ -70,7 +72,7 @@
         }
 
         .hero {
-/*          padding: 16rem 2rem 6rem;
+            /*          padding: 16rem 2rem 6rem;
             text-align: center;
             background: linear-gradient(45deg, var(--ocean-blue), var(--deep-teal));
             color: white;
@@ -94,7 +96,7 @@
             right: 0;
             left: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
         }
 
         .hero-content {
@@ -125,7 +127,7 @@
             right: 0;
             bottom: 0;
             opacity: 0.1;
-            background: 
+            background:
                 radial-gradient(circle at 20% 30%, white 0%, transparent 50%),
                 radial-gradient(circle at 80% 70%, white 0%, transparent 50%);
         }
@@ -145,7 +147,7 @@
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .features {
@@ -202,7 +204,7 @@
             padding: 2rem;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .section-title {
@@ -223,11 +225,11 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .features-grid {
                 grid-template-columns: 1fr;
             }
@@ -238,23 +240,115 @@
                 transform: scale(0);
                 opacity: 0.5;
             }
+
             100% {
                 transform: scale(2);
                 opacity: 0;
             }
         }
+
+        .remark {
+            background-color: beige;
+            color: var(--deep-teal);
+            font-weight: bold;
+            font-size: larger;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .pricing-container {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .pricing-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .pricing-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .pricing-card-price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card-price span {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .pricing-features {
+            list-style-type: none;
+            margin-bottom: 25px;
+        }
+
+        .pricing-features li {
+            padding: 10px;
+            border-bottom: 1px solid #ecf0f1;
+            color: #555;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-button {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--deep-teal);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pricing-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Optional: Highlight the most popular plan */
+        .pricing-card.recommended {
+            border: 2px solid #3498db;
+            transform: scale(1.05);
+        }
     </style>
 </head>
+
 <body>
     <nav class="nav">
         <div class="nav-content">
-            <div class="logo" style="z-index: 10;">
-                <img src="/images/logo2.png" alt="" style="height: 4rem">
+            <div class="logo">
+                <img src="/images/logo2.svg" alt="" height="80">
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#testimonials">Testimonials</a>
                 <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#aboutus">About Us</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -266,7 +360,8 @@
         <div class="hero-content">
             <h1 class="animate__animated animate__fadeIn">Small Actions, Profound Impact</h1>
             <p class="animate__animated animate__fadeIn animate__delay-1s">
-                Take your goals and tasks into ripples of achievement with our mindful productivity app
+                Take your goals and tasks into ripples of achievement with our mindful productivity app.
+            <div class="remark animate__animated animate__fadeIn animate__delay-1s">Works for enterprises too!</div>
             </p>
             <a href="#signup" class="cta-button animate__animated animate__fadeIn animate__delay-2s">
                 Start Your Journey
@@ -275,7 +370,7 @@
     </section>
 
     <section class="features" id="features">
-        <h2 class="section-title">How RippleTasks Flows</h2>
+        <h2 class="section-title">RippleTasks Features</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
@@ -297,6 +392,46 @@
                 </div>
                 <h3>Energy Alignment</h3>
                 <p>Work with your natural rhythms</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="/images/enterprise2.svg" alt="Enterprise icon" height="80" />
+                </div>
+                <h3>For Enterprises</h3>
+                <p>Get productivity and wellness insights from your coworkers</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-container" id="pricing">
+        <h2 class="section-title">Compare Editions</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h2 class="pricing-card-title">Starter</h2>
+                <div class="pricing-card-price">Free</div>
+                <ul class="pricing-features">
+                    <li>Mindful settings before tasks</li>
+                    <li>AI assisted atomic tasks breakdown</li>
+                    <li>Time blocking exercises</li>
+                    <li>Progress dashboard</li>
+                    <li>Context setting and tags</li>
+                </ul>
+                <a href="#" class="pricing-button">Register</a>
+            </div>
+        
+            <div class="pricing-card" style="background-color: #f5e3dc;">
+                <h2 class="pricing-card-title">Enterprise</h2>
+                <div class="pricing-card-price"></div>
+                <ul class="pricing-features">
+                    <li>Team Mindfulness and Productivity Insights</li>
+                    <li>Customization and Branding</li>
+                    <li>Advanced Reporting for Leadership</li>
+                    <li>Customizable Organizational Mindfulness Programs</li>
+                    <li>Advanced Collaboration and Alignment Tools</li>
+                    <li>Enterprise Integration Capabilities: Slack, Microsoft Teams, Asana, Jira</li>
+                    <li>Personalized Learning and Development</li>
+                </ul>
+                <a href="#" class="pricing-button">Contact Sales</a>
             </div>
         </div>
     </section>
@@ -327,4 +462,5 @@
         </div>
     </footer>
 </body>
+
 </html>
